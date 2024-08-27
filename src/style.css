@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   font-family: "Libre Baskerville", serif;
-  font-weight: 700;
   font-style: normal;
 }
 
@@ -126,6 +125,37 @@ a new element after the content of each <li>*/
     background: rgb(231, 170, 57);
     transition: 1s;
 }
+
+.services{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding:10px;
+}
+
+
+
+
+
+
+/*--------------------media---------------------*/
+
+
+
 
 @media (max-width: 700px) {
   /* General Reset */
