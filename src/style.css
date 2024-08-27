@@ -5,6 +5,27 @@
   font-style: normal;
 }
 
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+
+}
+
+p{
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding:10px;
+}
+
+
 .header {
   /* Set the minimum height of the header section to 100% of the viewport height */
   min-height: 100vh;
@@ -134,19 +155,28 @@ a new element after the content of each <li>*/
 
 }
 
-h1 {
-    font-size: 36px;
-    font-weight: 600;
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
 }
 
-p{
-    color: black;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
-    padding:10px;
+.col {
+    /*This sets the initial size of the flex item before any available space is distributed. 
+    Here, it's 31% of the parent container.*/
+    flex-basis: 31%;
+    background: #f0f3b883;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
 }
 
+.col:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
 
 
 
@@ -270,4 +300,9 @@ p{
     background: rgb(231, 170, 57);
     transition: 1s;
   }
+
+  .row {
+    flex-direction: column;
+}
+
 }
