@@ -1,6 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .header {
@@ -9,11 +12,78 @@
   /* Set the width of the header to 100% of the parent element */
   width: 100%;
   /*Apply a background image with a linear gradient overlay.*/
-  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4,9,30,0.7)), url(images/backgroung-header.jpg);
+  background-image: linear-gradient(rgba(230, 233, 242, 0.7), rgba(233, 235, 245, 0.9)), url(images/backgroung-header.jpg);
   /* Position the background image at the center of the header */
   background-position: center;
   /* Scale the background image to cover the entire header area */
   background-size: cover;
   /* Set the position of the header relative to its parent element */
   position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Remove the underline from the logo link */
+/* Target the logo link directly */
+.header a {
+  text-decoration: none;
+}
+
+.logo {
+  /* Set the font size for the logo text */
+  font-size: 2.5rem;
+  /* Make the logo text bold */
+  font-weight: bold;
+  /* Set the color of the logo text */
+  color: #080808;
+  /* Add some spacing between the letters */
+  letter-spacing: 2px;
+  /* Add a slight shadow to the text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Add padding around the logo text */
+  padding: 10px;
+  /* Set the logo text to have no underline */
+  text-decoration: none;
+}
+
+.nav-links {
+    /*the element will grow to fill the remaining space*/
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    font-weight: bold;
+    color: #070707;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+/*::after: This is a CSS pseudo-element that creates 
+a new element after the content of each <li>*/
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
 }
