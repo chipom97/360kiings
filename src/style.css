@@ -178,7 +178,52 @@ a new element after the content of each <li>*/
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 
+.products {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
 
+.col1 {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+
+.col1 img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.chickens img {
+    padding-left: 2.5cm;
+    width: 60%;
+}
+
+.name p {
+    padding: 0;
+}
+
+.name h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+
+}
+
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
 
 
 
