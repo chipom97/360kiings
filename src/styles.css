@@ -1,27 +1,30 @@
 /* General styles */
 body {
   font-family: "Libre Baskerville", serif;
-padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
   line-height: 1.6;
+  box-sizing: border-box;
 }
+
 .home .text-box {
   text-align: center;
   z-index: 1;
   color: #fff;
+  padding: 0 10px; /* Added padding to handle small screen sizes */
 }
 
 .slogan {
-  font-size: 4rem;
-  margin-bottom: 20px;
+  font-size: 2.5rem; /* Reduced font size for better responsiveness */
+  margin-bottom: 10px;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2rem; /* Adjusted font size */
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 1.5rem; /* Adjusted font size */
 }
 
 ul {
@@ -49,12 +52,11 @@ a {
 }
 
 .header .logo {
-  font-size: 2.5rem;
+  font-size: 1.8rem; /* Reduced font size */
   font-weight: bold;
   color: white;
   letter-spacing: 2px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  padding: 10px;
 }
 
 .header .nav-links ul {
@@ -62,7 +64,7 @@ a {
 }
 
 .header .nav-links ul li {
-  margin: 0 15px;
+  margin: 0 10px; /* Reduced margin */
 }
 
 .header .nav-links ul li a {
@@ -84,11 +86,12 @@ a {
     url(images/backgroung-header.jpg);
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: 70vh; /* Reduced height */
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 10px; /* Added padding to handle small screen sizes */
 }
 
 .home::before {
@@ -104,60 +107,161 @@ a {
 
 /* About Section */
 .about {
-  min-height: 40vh;
-  padding: 100px 0;
+  min-height: 30vh; /* Reduced min-height */
+  padding: 50px 10px; /* Added padding for better spacing */
   text-align: center;
   background-color: #f4f4f4;
 }
 
 .about-content {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  flex-direction: column; /* Stack items vertically */
+  gap: 10px; /* Reduced gap */
 }
 
 .about-content p {
-  font-size: 1.5rem;
-  flex: 1;
+  font-size: 1rem; /* Adjusted font size */
   margin: 0;
 }
 
+/* Projects Section */
 .project {
-  min-height: 40vh;
-  padding: 100px 0;
+  min-height: 30vh; /* Reduced min-height */
+  padding: 50px 10px; /* Added padding for better spacing */
   text-align: center;
   background-color: #eae89c;
 }
 
 .project-content {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.project-content p {
-  font-size: 1.5rem;
-  flex: 1;
-  margin: 0;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  gap: 10px; /* Reduced gap */
 }
 
 .project-content img {
   width: 100%;
+  max-width: 500px; /* Added max-width to prevent too large images */
+  display: block; /* Ensure it's displayed as a block element */
+  margin: 0 auto; /* Center the image */
 }
+
+.project-content p {
+  font-size: 1rem; /* Adjusted font size */
+  margin: 0;
+}
+
 
 /* Footer Section */
 .footer {
-  padding: 10px 0;
+  padding: 10px 10px; /* Added padding for better spacing */
   background-color: #887514d5;
   color: #fff;
   text-align: center;
 }
 
 .footer h4 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .footer p {
-  max-width: 600px;
+  max-width: 100%; /* Removed max-width for better responsiveness */
   margin: 0 auto;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .header .logo {
+    font-size: 1.6rem; /* Adjusted font size */
+  }
+
+  .header .nav-links ul li {
+    margin: 0 5px; /* Reduced margin */
+  }
+
+  .home .slogan {
+    font-size: 2rem; /* Adjusted font size */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Adjusted font size */
+  }
+
+  h2 {
+    font-size: 1.2rem; /* Adjusted font size */
+  }
+
+  .about-content {
+    gap: 10px; /* Reduced gap */
+  }
+
+  .project-content {
+    gap: 10px; /* Reduced gap */
+  }
+}
+
+@media (max-width: 768px) {
+  .header nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header .nav-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header .nav-links ul li {
+    margin: 5px 0;
+  }
+
+  .home .slogan {
+    font-size: 1.5rem; /* Adjusted font size */
+  }
+
+  h1 {
+    font-size: 1.2rem; /* Adjusted font size */
+  }
+
+  h2 {
+    font-size: 1rem; /* Adjusted font size */
+  }
+
+  .about-content p {
+    font-size: 0.9rem; /* Adjusted font size */
+  }
+
+  .project-content p {
+    font-size: 0.9rem; /* Adjusted font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .header .logo {
+    font-size: 1.4rem; /* Adjusted font size */
+  }
+
+  .header .nav-links ul li {
+    margin: 5px 0;
+  }
+
+  .home .slogan {
+    font-size: 1.2rem; /* Adjusted font size */
+  }
+
+  h1 {
+    font-size: 1rem; /* Adjusted font size */
+  }
+
+  h2 {
+    font-size: 0.9rem; /* Adjusted font size */
+  }
+
+  .about-content p {
+    font-size: 0.8rem; /* Adjusted font size */
+  }
+
+  .project-content p {
+    font-size: 0.8rem; /* Adjusted font size */
+  }
 }
