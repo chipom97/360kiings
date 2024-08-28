@@ -1,3 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>360kiings</title>
+  </head>
+  <body>
+    <!--navigation-bar-->
+    <section class="header" id="home">
+      <nav>
+        <a href="index.html"><strong class="logo">360kiings</strong></a>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <!--the landing-page-->
+    <section class="home" id="home">
+      <div class="text-box">
+        <h1 class="slogan">Innovation That Inspires,
+            <br>
+            Solutions That Last</h1>
+      </div>
+    </section>
+
+    <!--About-->
+    <section class="about" id="about">
+      <h1>ABOUT US</h1>
+      <p>Our business, 360kiings Proprietary Limited is a technology company that is focused on creating a comprehensive health and wellness management platform that allows for both individuals and corporate bodies to access everything to do with health in Botswana.</p>
+    </section>
+
+    <!--Services-->
+    <section class="services" id="services">
+      <h1>SERVICES</h1>
+      <p>Chickens</p>
+      <p>Websites & Fullstack Applications</p>
+
+      <div class="row">
+        <!--chickens-->
+        <div class="livestock col">
+          <h3>Livestock</h3>
+          <p>We breed and sell chickens</p>
+        </div>
+
+        <!--Digital services-->
+        <div class="digital col">
+          <h3>Digital services</h3>
+          <p>
+            We provide digital services such as making websites and web
+            applications for companies
+          </p>
+        </div>
+
+        <!--Third service-->
+        <div class="third col">
+          <h3>Third-service</h3>
+          <p>Third-service</p>
+        </div>
+      </div>
+    </section>
+
+    <!--Products-->
+    <section class="products">
+      <h1>PROJECTS</h1>
+
+      <div class="row">
+        <!--emguidance-app-->
+        <div class="emg col1">
+          <img src="src/images/apps.svg" alt="pic" />
+          <!--heading for the image-->
+          <div class="name">
+            <h3>emguidance app prototype</h3>
+            <p>
+              EMGuidance prototype app that will provide healthcare
+              professionals with instant access to up-to-date medical
+              information, guidelines, and tools in Botswana.
+            </p>
+          </div>
+        </div>
+
+        <!--chickens-->
+        <div class="chickens col1">
+          <img src="src/images/chickens.png" alt="pic" />
+          <!--heading for the image-->
+          <div class="name">
+            <h3>Chickens</h3>
+          </div>
+        </div>
+
+        <!--third-service-->
+        <div class="planning col1">
+          <img src="src/images/planning.svg" alt="pic" />
+          <!--heading for the image-->
+          <div class="name">
+            <h3>Collaboration</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Contact-->
+    <section class="footer" id="contact">
+      <h4>About us</h4>
+      <p>text</p>
+    </section>
+  </body>
+</html>
 
 
 

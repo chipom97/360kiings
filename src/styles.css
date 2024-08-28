@@ -1,20 +1,27 @@
 /* General styles */
 body {
-  font-family: 'Libre Baskerville', serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: "Libre Baskerville", serif;
+padding: 0;
+    margin: 0;
   line-height: 1.6;
 }
-
-h1, h3 {
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
+.home .text-box {
+  text-align: center;
+  z-index: 1;
+  color: #fff;
 }
 
-p {
-  margin: 0 0 20px;
+.slogan {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
 }
 
 ul {
@@ -28,19 +35,13 @@ a {
   color: inherit;
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
-
-
 /* Navigation Bar */
 .header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #333;
-  padding: 10px 20px;
+  padding: 10px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -48,8 +49,12 @@ a {
 }
 
 .header .logo {
-  color: #fff;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 10px;
 }
 
 .header .nav-links ul {
@@ -72,47 +77,22 @@ a {
 
 /* Hero Section */
 .home {
-  background-image: url('path/to/your/image.jpg');
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.834),
+      rgba(232, 213, 127, 0.813)
+    ),
+    url(images/backgroung-header.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 80vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.home .text-box {
-  text-align: center;
-  z-index: 1;
-  color: #fff;
-}
-
-.home .text-box h1 {
-  font-size: 4rem;
-  margin-bottom: 20px;
-}
-
-.home .text-box p {
-  font-size: 1.5rem;
-  margin-bottom: 40px;
-}
-
-.home .hero-btn {
-  background-color: #fff;
-  color: #333;
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.home .hero-btn:hover {
-  background-color: #ddd;
-}
-
 .home::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -122,92 +102,53 @@ a {
   z-index: 0;
 }
 
-
 /* About Section */
 .about {
+  min-height: 40vh;
   padding: 100px 0;
   text-align: center;
   background-color: #f4f4f4;
 }
 
-.about h1 {
-  margin-bottom: 20px;
-}
-
-.about p {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-
-/* Services Section */
-.services {
-  padding: 100px 0;
-  background-color: #fff;
-  text-align: center;
-}
-
-.services h1 {
-  margin-bottom: 40px;
-}
-
-.services .row {
+.about-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.services .col {
-  flex-basis: 30%;
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 10px;
+.about-content p {
+  font-size: 1.5rem;
+  flex: 1;
+  margin: 0;
 }
 
-.services .col h3 {
-  margin-bottom: 20px;
-}
-
-.services .col p {
-  font-size: 1rem;
-}
-
-
-/* Products Section */
-.products {
+.project {
+  min-height: 40vh;
   padding: 100px 0;
-  background-color: #f4f4f4;
-}
-
-.products h1 {
   text-align: center;
-  margin-bottom: 40px;
+  background-color: #eae89c;
 }
 
-.products .row {
+.project-content {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.products .col1 {
-  flex-basis: 30%;
-  text-align: center;
+.project-content p {
+  font-size: 1.5rem;
+  flex: 1;
+  margin: 0;
 }
 
-.products .col1 img {
+.project-content img {
   width: 100%;
-  height: auto;
-  margin-bottom: 20px;
 }
-
-.products .col1 h3 {
-  margin-top: 10px;
-}
-
 
 /* Footer Section */
 .footer {
-  padding: 40px 0;
-  background-color: #333;
+  padding: 10px 0;
+  background-color: #887514d5;
   color: #fff;
   text-align: center;
 }
