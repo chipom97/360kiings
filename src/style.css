@@ -28,7 +28,7 @@ p{
 
 .header {
   /* Set the minimum height of the header section to 100% of the viewport height */
-  min-height: 100vh;
+  min-height:8vh;
   /* Set the width of the header to 100% of the parent element */
   width: 100%;
   /*Apply a background image with a linear gradient overlay.*/
