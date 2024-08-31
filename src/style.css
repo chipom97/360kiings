@@ -1,361 +1,267 @@
-* {
-  margin: 0;
-  padding: 0;
+/* General styles */
+body {
   font-family: "Libre Baskerville", serif;
-  font-style: normal;
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+.home .text-box {
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+  padding: 0 10px; /* Added padding to handle small screen sizes */
+}
+
+.slogan {
+  font-size: 2.5rem; /* Reduced font size for better responsiveness */
+  margin-bottom: 10px;
 }
 
 h1 {
-    font-size: 36px;
-    font-weight: 600;
+  font-size: 2rem; /* Adjusted font size */
 }
 
-h3 {
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
-
+h2 {
+  font-size: 1.5rem; /* Adjusted font size */
 }
 
-p{
-    color: black;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
-    padding:10px;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-
-.header {
-  /* Set the minimum height of the header section to 100% of the viewport height */
-  min-height:8vh;
-  /* Set the width of the header to 100% of the parent element */
-  width: 100%;
-  /*Apply a background image with a linear gradient overlay.*/
-  background-image: linear-gradient(rgba(255, 255, 255, 0.834), rgba(232, 213, 127, 0.813)), url(images/backgroung-header.jpg);
-  /* Position the background image at the center of the header */
-  background-position: center;
-  /* Scale the background image to cover the entire header area */
-  background-size: cover;
-  /* Set the position of the header relative to its parent element */
-  position: relative;
-}
-
-nav {
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Remove the underline from the logo link */
-/* Target the logo link directly */
-.header a {
+a {
   text-decoration: none;
+  color: inherit;
 }
 
-.logo {
-  /* Set the font size for the logo text */
-  font-size: 2.5rem;
-  /* Make the logo text bold */
-  font-weight: bold;
-  /* Set the color of the logo text */
-  color: black;
-  /* Add some spacing between the letters */
-  letter-spacing: 2px;
-  /* Add a slight shadow to the text */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  /* Add padding around the logo text */
+/* Navigation Bar */
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
   padding: 10px;
-  /* Set the logo text to have no underline */
-  text-decoration: none;
-}
-
-.nav-links {
-    /*the element will grow to fill the remaining space*/
-    flex: 1;
-    text-align: right;
-}
-
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-
-.nav-links ul li a{
-    font-weight: bold;
-    color: black;
-    text-decoration: none;
-    font-size: 18px;
-
-}
-
-
-/*::after: This is a CSS pseudo-element that creates 
-a new element after the content of each <li>*/
-.nav-links ul li::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-}
-
-.nav-links ul li:hover::after{
-    width: 100%;
-}
-
-
-.home {
-  min-height:100vh;
+  position: fixed;
   width: 100%;
-  background-color: #f44336;
-  position: relative;   
+  top: 0;
+  z-index: 1000;
 }
 
-.text-box{
-    width: 90%;
-    color: black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+.header .logo {
+  font-size: 1.8rem; /* Reduced font size */
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.text-box h1{
-    font-size: 62px;
+.header .nav-links ul {
+  display: flex;
 }
 
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 14px;
-    color: black;
+.header .nav-links ul li {
+  margin: 0 10px; /* Reduced margin */
 }
 
-.hero-btn{
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-    border: 1px solid black;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
+.header .nav-links ul li a {
+  color: #fff;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
 }
 
-.hero-btn:hover{
-    border: 1px solid rgb(231, 170, 57);
-    background: rgb(231, 170, 57);
-    transition: 1s;
+.header .nav-links ul li a:hover {
+  color: #ddd;
 }
 
-.services{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
+/* Hero Section */
+.home {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.834),
+      rgba(232, 213, 127, 0.813)
+    ),
+    url(images/backgroung-header.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 70vh; /* Reduced height */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px; /* Added padding to handle small screen sizes */
+}
 
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the overlay opacity as needed */
+  z-index: 0;
+}
+
+/* About Section */
+.about {
+  min-height: 30vh; /* Reduced min-height */
+  padding: 50px 10px; /* Added padding for better spacing */
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 10px; /* Reduced gap */
+}
+
+.about-content p {
+  font-size: 1rem; /* Adjusted font size */
+  margin: 0;
+}
+
+/* Projects Section */
+.project {
+  min-height: 30vh; /* Reduced min-height */
+  padding: 50px 10px; /* Added padding for better spacing */
+  text-align: center;
+  background-color: #eae89c;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  gap: 10px; /* Reduced gap */
+}
+
+.project-content img {
+  width: 100%;
+  max-width: 500px; /* Added max-width to prevent too large images */
+  display: block; /* Ensure it's displayed as a block element */
+  margin: 0 auto; /* Center the image */
+}
+
+.project-content p {
+  font-size: 1rem; /* Adjusted font size */
+  margin: 0;
 }
 
 
-.row {
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.col {
-    /*This sets the initial size of the flex item before any available space is distributed. 
-    Here, it's 31% of the parent container.*/
-    flex-basis: 31%;
-    background: #f0f3b883;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
-    transition: 0.5s;
-}
-
-.col:hover {
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-}
-
-.products {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-
-.col1 {
-    flex-basis: 31%;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    text-align: left;
-}
-
-.col1 img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.chickens img {
-    padding-left: 2.5cm;
-    width: 60%;
-}
-
-.name p {
-    padding: 0;
-}
-
-.name h3{
-    margin-top: 16px;
-    margin-bottom: 15px;
-
-}
-
+/* Footer Section */
 .footer {
-    width: 100%;
-    text-align: center;
-    padding: 30px 0;
-
+  padding: 10px 10px; /* Added padding for better spacing */
+  background-color: #887514d5;
+  color: #fff;
+  text-align: center;
 }
 
-.footer h4{
-    margin-bottom: 25px;
-    margin-top: 20px;
-    font-weight: 600;
+.footer h4 {
+  margin-bottom: 10px;
 }
 
+.footer p {
+  max-width: 100%; /* Removed max-width for better responsiveness */
+  margin: 0 auto;
+}
 
-
-/*--------------------media---------------------*/
-
-
-
-
-@media (max-width: 700px) {
-  /* General Reset */
-  * {
-    margin: 0;
-    padding: 0;
-    font-family: "Libre Baskerville", serif;
-    font-weight: 700;
-    font-style: normal;
+/* Media Queries */
+@media (max-width: 1200px) {
+  .header .logo {
+    font-size: 1.6rem; /* Adjusted font size */
   }
 
-  /* Header */
-  .header {
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.834), rgba(232, 213, 127, 0.813)), url(images/backgroung-header.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
+  .header .nav-links ul li {
+    margin: 0 5px; /* Reduced margin */
   }
 
-  /* Navigation */
-  nav {
-    display: flex;
-    padding: 5% 4%; /* Adjusted padding for smaller screens */
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column; /* Stack elements vertically */
+  .home .slogan {
+    font-size: 2rem; /* Adjusted font size */
   }
 
-  /* Remove underline from logo link */
-  .header a {
-    text-decoration: none;
+  h1 {
+    font-size: 1.5rem; /* Adjusted font size */
   }
 
-  /* Logo */
-  .logo {
-    font-size: 2rem; /* Reduced font size for smaller screens */
-    font-weight: bold;
-    color: black;
-    letter-spacing: 1px; /* Slightly reduce letter-spacing */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Adjusted text-shadow */
-    padding: 8px; /* Reduced padding */
+  h2 {
+    font-size: 1.2rem; /* Adjusted font size */
   }
 
-  /* Navigation Links */
-  .nav-links {
-    flex: 1;
-    text-align: center; /* Center align for smaller screens */
-    width: 100%; /* Full width for the nav-links */
-    margin-top: 10px; /* Add some space between nav items */
+  .about-content {
+    gap: 10px; /* Reduced gap */
   }
 
-  .nav-links ul {
-    padding: 0;
+  .project-content {
+    gap: 10px; /* Reduced gap */
   }
+}
 
-  .nav-links ul li {
-    display: block; /* Stack items vertically */
-    padding: 10px 0; /* Adjusted padding for better spacing */
-  }
-
-  .nav-links ul li a {
-    font-size: 16px; /* Slightly smaller font size */
-    color: black;
-    text-decoration: none;
-  }
-
-  .nav-links ul li::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #f44336;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-  }
-
-  .nav-links ul li:hover::after {
-    width: 100%;
-  }
-
-  /* Text Box */
-  .text-box {
-    width: 95%; /* Slightly reduced width */
-    color: black;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-
-  .text-box h1 {
-    font-size: 48px; /* Reduced font size */
-  }
-
-  .text-box p {
-    margin: 10px 0 20px;
-    font-size: 12px; /* Reduced font size */
-    color: black;
-  }
-
-  /* Hero Button */
-  .hero-btn {
-    padding: 10px 28px; /* Adjusted padding */
-    font-size: 12px; /* Slightly smaller font size */
-  }
-
-  .hero-btn:hover {
-    border: 1px solid rgb(231, 170, 57);
-    background: rgb(231, 170, 57);
-    transition: 1s;
-  }
-
-  .row {
+@media (max-width: 768px) {
+  .header nav {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header .nav-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header .nav-links ul li {
+    margin: 5px 0;
+  }
+
+  .home .slogan {
+    font-size: 1.5rem; /* Adjusted font size */
+  }
+
+  h1 {
+    font-size: 1.2rem; /* Adjusted font size */
+  }
+
+  h2 {
+    font-size: 1rem; /* Adjusted font size */
+  }
+
+  .about-content p {
+    font-size: 0.9rem; /* Adjusted font size */
+  }
+
+  .project-content p {
+    font-size: 0.9rem; /* Adjusted font size */
+  }
 }
 
+@media (max-width: 480px) {
+  .header .logo {
+    font-size: 1.4rem; /* Adjusted font size */
+  }
+
+  .header .nav-links ul li {
+    margin: 5px 0;
+  }
+
+  .home .slogan {
+    font-size: 1.2rem; /* Adjusted font size */
+  }
+
+  h1 {
+    font-size: 1rem; /* Adjusted font size */
+  }
+
+  h2 {
+    font-size: 0.9rem; /* Adjusted font size */
+  }
+
+  .about-content p {
+    font-size: 0.8rem; /* Adjusted font size */
+  }
+
+  .project-content p {
+    font-size: 0.8rem; /* Adjusted font size */
+  }
 }
