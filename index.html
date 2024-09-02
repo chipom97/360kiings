@@ -10,10 +10,11 @@
       href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
+    <!--Website Title-->
     <title>360kiings</title>
   </head>
   <body>
-    <!--navigation-bar-->
+    <!--Navigation Bar-->
     <section class="header" id="home">
       <nav>
         <a href="index.html"><strong class="logo">360kiings</strong></a>
@@ -26,6 +27,7 @@
         </div>
       </nav>
     </section>
+
     <!--the landing-page-->
     <section class="home" id="home">
       <div class="text-box">
@@ -37,6 +39,37 @@
       </div>
     </section>
 
+    <!--Basic Table Structure-->
+    <table>
+      <!--Column headings should also have their own tr opening
+      and closing tags-->
+      <tr>
+        <th>To leave some space</th>
+        <th scope="col">Column 1</th>
+        <th scope="col">Column 2</th>
+        <th scope="col">Column 3</th>
+        <th scope="col">Column 4</th>
+      </tr>
+      <!--The row coloums go within the same opening and closing tr tags-->
+      <tr>
+        <th scope="row">Row 1:</th>
+        <td>text1</td>
+        <td>text2</td>
+        <!--rowspan attriute to stretch rows
+        the  next text is automatically taken to the next column-->
+        <td rowspan="2">text3</td>
+      </tr>
+      <!--the colspan attribute can be used to stretch columns-->
+      <tr>
+        <th scope="row">Row 2:</th>
+        <td colspan="2">text1 and text2</td>
+        <td>text4</td>
+      </tr>
+      <tr>
+        <th scope="row">Row 3:</th>
+        <td colspan="3">text1 and text2 and text3</td>
+      </tr>
+    </table>
     <!--About us-->
     <section class="about" id="about">
       <h1>ABOUT US</h1>
@@ -77,16 +110,18 @@
         <div class="project-description">
           <h2>emguidance app prototype</h2>
           <p>
-            The EMGuidance prototype app that will provide healthcare professionals
-            with instant access to up-to-date medical information, guidelines,
-            and tools in Botswana.
+            The EMGuidance prototype app that will provide healthcare
+            professionals with instant access to up-to-date medical information,
+            guidelines, and tools in Botswana.
           </p>
           <br />
           <p>
             We aim to bridge the gap in accessible healthcare services in
             Botswana by providing a digital platform that connects patients with
             healthcare professionals.
-          <br />
+            <br />
+          </p>
+
           <p>
             Our app seeks to make it easier to access information health which
             for the longest time has been a difficult thing to do.
