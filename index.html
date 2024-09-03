@@ -40,7 +40,10 @@
     </section>
 
     <!--Basic Table Structure-->
-    <table>
+    <!--border to add some lines around the table elements, 
+    cellpadding-space around the elements,
+    cellspacing - spacing between cells-->
+    <table border="1" cellpadding="10" cellspacing="10">
       <!--Column headings should also have their own tr opening
       and closing tags-->
       <thead>
@@ -149,96 +152,116 @@
     </section>
 
     <section class="forms">
-      <!-- Start of the form -->
-<form action="#" method="get">
-  
-  <!-- Grouping related form elements together -->
-  <fieldset>
-    <!-- Title for the group of personal details -->
-    <legend>Your Details:</legend>
-    
-    <!-- Input for user's name -->
-    <label for="">
-      Name:
-      <input type="text" name="name" size="30" maxlength="100" />
-      <!-- 'size' sets the width of the input field, 'maxlength' limits the number of characters -->
-    </label>
-    <br />
-    
-    <!-- Input for user's email -->
-    <label for="">
-      Email:
-      <input type="email" name="email" size="30" maxlength="100" />
-      <!-- The 'type="email"' ensures the input is a valid email address -->
-    </label>
-    <br />
-  </fieldset>
-  <br>
-  
-  <!-- Grouping elements related to the user's review -->
-  <fieldset>
-    <!-- Title for the review section -->
-    <legend>Your Review:</legend>
-    
-    <!-- Dropdown for selecting how the user heard about the site -->
-    <p>
-      <label for="hear-about"> How did you hear about us? </label>
-      <select name="referrer" id="hear-about">
-        <!-- Options the user can select from -->
-        <option value="google">Google</option>
-        <option value="friend">Friend</option>
-        <option value="advert">Advert</option>
-        <option value="other">Other</option>
-      </select>
-    </p>
-    
-    <!-- Radio buttons for asking if the user would visit again -->
-    <p>
-      Would you visit again?
-      <br />
-      <label>
-        <input type="radio" name="rating" value="yes" />
-        Yes
-      </label>
-      <label>
-        <input type="radio" name="rating" value="no" />
-        No
-      </label>
-      <label>
-        <input type="radio" name="rating" value="maybe" />
-        Maybe
-      </label>
-      <!-- Only one radio button can be selected at a time -->
-    </p>
-    
-    <!-- Text area for additional comments -->
-    <p>
-      <label for="comments"> Comments: </label>
-      <br />
-      <textarea rows="4" cols="40" id="comments"> </textarea>
-      <!-- 'rows' and 'cols' control the size of the text area -->
-    </p>
-    
-    <!-- Checkbox for signing up for email updates -->
-    <label>
-      <input type="checkbox" name="subscribe" checked="checked" />
-      Sign me up for email updates
-      <!-- The 'checked' attribute means the checkbox is selected by default -->
-    </label>
-    <br />
-    
-    <!-- Submit button for the form -->
-    <input type="submit" value="Submit review" />
-  </fieldset>
-</form>
+      <!-- Start of the form,
+       action: url for the page on the sever that will recieve the
+       the information in the form when submitted,
+       learn about get and post methods -->
+      <form action="#" method="get">
+        <!-- Grouping related form elements together 
+   creates a seperate box around the elements it contains-->
+        <fieldset>
+          <!-- Title for the group of personal details,
+     caption for the grouped elements-->
+          <legend>Your Details:</legend>
 
+          <!-- Input for user's name,
+           The for attribute's value should match the id of the form control it is associated with.
+           When the user clicks on the label, the browser will automatically focus on or activate 
+           the associated form control.-->
+          <label for="name">
+            Name:
+            <input type="text" name="name" size="30" maxlength="100" />
+            <!-- 'size' sets the width of the input field, 'maxlength' limits the number of characters -->
+          </label>
+          <br />
+
+          <!-- Input for user's email -->
+          <label for="email">
+            Email:
+            <input type="email" name="email" size="30" maxlength="100" />
+            <!-- The 'type="email"' ensures the input is a valid email address -->
+          </label>
+          <br />
+
+          <label for="passwird">
+            Password:
+            <input type="password" name="password" />
+          </label>
+        </fieldset>
+        <br />
+
+        <!-- Grouping elements related to the user's review -->
+        <fieldset>
+          <!-- Title for the review section -->
+          <legend>Your Review:</legend>
+
+          <!-- Dropdown for selecting how the user heard about the site -->
+          <p>
+            <label for="hear-about"> How did you hear about us? </label>
+            <select name="referrer" id="hear-about">
+              <!-- Options the user can select from -->
+              <option value="google">Google</option>
+              <option value="friend">Friend</option>
+              <option value="advert">Advert</option>
+              <option value="other">Other</option>
+            </select>
+          </p>
+
+          <!-- Radio buttons for asking if the user would visit again -->
+          <p>
+            Would you visit again?
+            <br />
+            <label>
+              <!--The name attribute is sent to the server with the
+               value of the option the user selects. the value of the name attribute 
+               should be the same for all of the radio buttons used to answer that question.-->
+              <input type="radio" name="rating" value="yes" />
+              Yes
+            </label>
+            <label>
+              <!-- The value attribute indicates the value that is sent to the server for the selected option-->
+              <input type="radio" name="rating" value="no" />
+              No
+            </label>
+            <label>
+              <input type="radio" name="rating" value="maybe" />
+              Maybe
+            </label>
+            <!-- Only one radio button can be selected at a time -->
+          </p>
+
+          <!-- Text area for additional comments -->
+          <p>
+            <label for="comments"> Comments: </label>
+            <br />
+            <!--textarea creates multi-line text input-->
+            <textarea rows="4" cols="40" id="comments">
+ Enter you comments
+            </textarea>
+            <!-- 'rows' and 'cols' control the size of the text area -->
+          </p>
+
+          <!-- Checkboxes allow users to select (and unselect)
+           one or more options in answer to a question. The value attribute indicates
+          the value sent to the server if this
+          checkbox is checked. The checked attribute indicates
+          that this box should be checked
+          when the page loads. If used, its
+          value should be checked. -->
+          <label>
+            <input type="checkbox" name="subscribe" checked="checked" />
+            Sign me up for email updates
+            <!-- The 'checked' attribute means the checkbox is selected by default -->
+          </label>
+          <br />
+
+          <!-- Submit button for the form -->
+          <input type="submit" value="Submit review" />
+        </fieldset>
+      </form>
     </section>
-    <br>
-     horizontal line
-  <hr>
+    <br />
+    horizontal line
+    <hr />
   </body>
-
- 
-
-
 </html>
