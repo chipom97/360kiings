@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*consistenet sizing*/
+}
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+}
+
+/* Logo styles */
+.logo {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* Navigation links styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+/* Individual llink styles */
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
